@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: "Be Vietnam Pro", sans-serif;
+    overflow-y: auto;
+}
+
+#wrapper {
+    box-sizing: border-box;
+}
+
+.nav {
+    height: 7rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+.logo {
+    height: 5rem;
+    margin: 0;
+    position: relative;
+    left: -1vw;
+}
+
+.text {
+    z-index: 10;
+    font-size: 2rem;
+    position: relative;
+    right: 2.5rem;
+}
+
+.sub-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3vw;
+    margin-right: 23vw;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+li {
+    transition-property: font-weight;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+li:hover {
+    font-weight: bold;
+}
+
+
+.content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-left: 19vw;
+    margin-top: 10vh;
+}
+
+.left {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.right {
+    margin-left: 8vw;
+}
+
+.userimg {
+    animation-name: up-down;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition-timing-function: ease-in-out;
+    position: relative;
+}
+
+.cube {
+    animation-name: rot;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.zigzag {
+    animation-name: zig;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes zig {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(12px);
+    }
+}
+
+.circle {
+    animation: circle 2s infinite;
+}
+@keyframes circle {
+    from{
+        transform: translateX(0);
+        transform: translateY(0);
+    }
+    to{
+        transform: translateX(12px);
+    }
+}
+
+@keyframes rot {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 180deg;
+    }
+}
+
+@keyframes up-down {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.1;
+    }
+}
+
+.in-btn {
+    background-color: #e14a4a;
+    height: 4rem;
+    width: 9rem;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    font-weight: lighter;
+    cursor: pointer;
+    transition-property: color, background-color;
+    transition-duration: 0.8s;
+    transition-timing-function: ease;
+}
+
+.in-btn:hover {
+    color: #e14a4a;
+    background: pink;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+    background-color: rgb(231, 231, 231);
+    margin-top: 6rem;
+    padding: 2rem;
+}
+
+.proj-img {
+    height: 60vh;
+    width: 62vw;
+    object-fit: cover;
+    box-shadow: 0px 0px 40px #1f1f1f;
+}
+
+.middle {
+    position: relative;
+    left: 12vw;
+    top: 15vh;
+    font-size: 10rem;
+    color: rgb(231, 231, 231);
+}
+
+.img {
+    position: relative;
+    left: 4vw;
+}
+
+.text2 {
+    font-size: 5rem;
+    color: #e51e1e;
+}
+
+.skills {
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    transform: translateX(15rem);
+    gap: 10rem;
+}
+
+.stack {
+    height: 5rem;
+    width: 5rem;
+    cursor: pointer;
+    transition-property: scale;
+    transition-duration: 0.8s;
+    transition-timing-function: linear;
+}
+
+.stack:hover {
+    scale: 1.2;
+}
+
+.right1 {
+    display: grid;
+    grid-template-columns: 5rem 5rem 5rem;
+    gap: 2rem;
+}
+
+.contact {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 3rem;
+    align-items: center;
+    background-color: rgb(231, 231, 231);
+    padding: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.input {
+    height: 3rem;
+    width: 50vw;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    padding: 1rem;
+}
+
+.textarea {
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    width: 50vw;
+}
+
+.message {
+    height: 4rem;
+    width: 15rem;
+    background-color: #e14a4a;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    transition-property: color, background-color;
+    transition-duration: 0.8s;
+    transition-timing-function: ease;
+    cursor: pointer;
+}
+
+.middle2 {
+    transform: translateX(95rem);
+    font-size: 10rem;
+    position: relative;
+    top: 9rem;
+    color: rgb(231, 231, 231);
+}
+
+.footer {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    background: #343d68;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+.message:hover{
+    background-color: pink;
+    color: #e14a4a;
+}
