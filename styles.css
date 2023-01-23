@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+
 * {
     margin: 0;
     padding: 0;
@@ -114,12 +115,14 @@ li:hover {
 .circle {
     animation: circle 2s infinite;
 }
+
 @keyframes circle {
-    from{
+    from {
         transform: translateX(0);
         transform: translateY(0);
     }
-    to{
+
+    to {
         transform: translateX(12px);
     }
 }
@@ -153,14 +156,26 @@ li:hover {
     border: none;
     font-weight: lighter;
     cursor: pointer;
-    transition-property: color, background-color;
-    transition-duration: 0.8s;
-    transition-timing-function: ease;
+    position: relative;
+    z-index: 1;
 }
 
-.in-btn:hover {
-    color: #e14a4a;
-    background: pink;
+.in-btn::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(47, 26, 31);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.in-btn:hover::before {
+    transform: scaleX(1);
 }
 
 .projects {
@@ -271,6 +286,24 @@ form {
     transition-timing-function: ease;
     cursor: pointer;
 }
+.message::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(47, 26, 31);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: -1;
+    transition: all 1s;
+    transition-timing-function: ease;
+}
+
+.message:hover::before {
+    transform: scaleX(1);
+}
 
 .middle2 {
     transform: translateX(95rem);
@@ -293,7 +326,7 @@ form {
     text-decoration: none;
     color: white;
 }
-.message:hover{
-    background-color: pink;
-    color: #e14a4a;
+
+.message:hover {
+    transform: scaleX(1);
 }
