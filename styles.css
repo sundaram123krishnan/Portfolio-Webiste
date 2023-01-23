@@ -7,7 +7,6 @@
     scroll-behavior: smooth;
     overflow-x: hidden;
     font-family: "Be Vietnam Pro", sans-serif;
-    overflow-y: auto;
 }
 
 #wrapper {
@@ -66,20 +65,27 @@ li:hover {
 
 .content {
     display: grid;
-    grid-template-columns: 50% 50%;
-    margin-left: 19vw;
-    margin-top: 10vh;
+    grid-template-columns: 50vw 50vw;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
 .left {
-    display: flex;
+    /* display: flex;
     justify-content: space-evenly;
-    flex-direction: column;
+    flex-direction: column; */
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 
 .right {
-    margin-left: 8vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .userimg {
     animation-name: up-down;
@@ -189,11 +195,24 @@ li:hover {
     padding: 2rem;
 }
 
-.proj-img {
+/* .proj-img {
     height: 60vh;
     width: 62vw;
     object-fit: cover;
     box-shadow: 0px 0px 40px #1f1f1f;
+    cursor: pointer;
+} */
+
+.proj1 {
+    box-shadow: 0px 0px 40px #1f1f1f;
+    cursor: pointer;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/images/projects/Project1.png');
+    background-size: cover;
+    object-fit: contain;
+    width: 62vw;
+    height: 60vh;
 }
 
 .middle {
@@ -286,6 +305,7 @@ form {
     transition-timing-function: ease;
     cursor: pointer;
 }
+
 .message::before {
     content: "";
     position: absolute;
@@ -314,7 +334,7 @@ form {
 }
 
 .footer {
-    height: 20vh;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -329,4 +349,94 @@ form {
 
 .message:hover {
     transform: scaleX(1);
+}
+
+.proj1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    color: white;
+}
+
+.sub-proj-img {
+    height: 5rem;
+    width: 5rem;
+    z-index: 1;
+}
+
+.proj1-button {
+    height: 2.5rem;
+    width: 5rem;
+    z-index: 1;
+}
+
+.proj2 {
+    box-shadow: 0px 0px 40px #1f1f1f;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/images/projects/Project2.png');
+    cursor: pointer;
+    background-size: cover;
+    object-fit: contain;
+    width: 62vw;
+    height: 60vh;
+}
+
+.proj2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    color: white;
+}
+
+.proj2-img {
+    display: flex;
+    gap: 2rem;
+}
+
+.proj3 {
+    box-shadow: 0px 0px 40px #1f1f1f;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/images/projects/Project3.png');
+    cursor: pointer;
+    background-size: cover;
+    object-fit: contain;
+    width: 62vw;
+    height: 60vh;
+}
+
+.proj3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    color: white;
+}
+
+.proj4 {
+    box-shadow: 0px 0px 40px #1f1f1f;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/images/projects/Project3.png');
+    cursor: pointer;
+    background-size: cover;
+    object-fit: contain;
+    width: 62vw;
+    height: 60vh;
+}
+
+.proj4 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    color: white;
 }
