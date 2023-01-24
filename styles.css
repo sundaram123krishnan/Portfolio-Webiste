@@ -65,92 +65,23 @@ li:hover {
 
 .content {
     display: grid;
-    grid-template-columns: 50vw 50vw;
-    justify-content: center;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
     align-items: center;
-    padding: 2rem;
+    margin-left: 23rem;
+    margin-right: 13rem;
+    margin-top: 5rem;
 }
 
 .left {
-    /* display: flex;
-    justify-content: space-evenly;
-    flex-direction: column; */
-    display: grid;
-    justify-items: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
 }
 
-.right {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.userimg {
-    animation-name: up-down;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    transition-timing-function: ease-in-out;
-    position: relative;
-}
-
-.cube {
-    animation-name: rot;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
-}
-
-.zigzag {
-    animation-name: zig;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes zig {
-    from {
-        transform: translateX(0px);
-    }
-
-    to {
-        transform: translateX(12px);
-    }
-}
-
-.circle {
-    animation: circle 2s infinite;
-}
-
-@keyframes circle {
-    from {
-        transform: translateX(0);
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateX(12px);
-    }
-}
-
-@keyframes rot {
-    from {
-        rotate: 0deg;
-    }
-
-    to {
-        rotate: 180deg;
-    }
-}
-
-@keyframes up-down {
-    from {
-        scale: 1;
-    }
-
-    to {
-        scale: 1.1;
-    }
+.usrimg {
+    border: 10px solid #1f1f1f;
 }
 
 .in-btn {
@@ -192,7 +123,7 @@ li:hover {
     align-items: center;
     background-color: rgb(231, 231, 231);
     margin-top: 6rem;
-    padding: 2rem;
+    padding: 5rem;
 }
 
 /* .proj-img {
@@ -424,7 +355,7 @@ form {
     box-shadow: 0px 0px 40px #1f1f1f;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('/images/projects/Project3.png');
+        url('/images/projects/Project4.png');
     cursor: pointer;
     background-size: cover;
     object-fit: contain;
@@ -439,4 +370,147 @@ form {
     gap: 2rem;
     padding: 2rem;
     color: white;
+}
+
+.proj1-button {
+    background-color: #e14a4a;
+    height: 4rem;
+    width: 9rem;
+    color: black;
+    font-size: 1.5rem;
+    border: none;
+    font-weight: lighter;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.proj1-button::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.proj1-button:hover::before {
+    transform: scaleX(1);
+}
+
+.proj1 {
+    position: relative;
+    z-index: 1;
+    transition: all 1s;
+}
+
+.proj1::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(4, 4, 62, 0.5);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.proj1:hover::before {
+    transform: scaleX(1);
+}
+
+.proj1:hover {
+    scale: 1.1;
+}
+
+.proj2 {
+    position: relative;
+    z-index: 1;
+    transition: all 1s;
+}
+
+.proj2::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(4, 4, 62, 0.5);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.proj2:hover::before {
+    transform: scaleX(1);
+}
+
+.proj2:hover {
+    scale: 1.1;
+}
+
+.proj3 {
+    position: relative;
+    z-index: 1;
+    transition: all 1s;
+}
+
+.proj3::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(4, 4, 62, 0.5);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.proj3:hover::before {
+    transform: scaleX(1);
+}
+
+.proj3:hover {
+    scale: 1.1;
+}
+
+.proj4 {
+    position: relative;
+    z-index: 1;
+    transition: all 1s;
+}
+
+.proj4::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(4, 4, 62, 0.5);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.proj4:hover::before {
+    transform: scaleX(1);
+}
+
+.proj4:hover {
+    scale: 1.1;
 }
